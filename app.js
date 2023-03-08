@@ -60,5 +60,5 @@ if (questionFive === '') {
 //   console.log('Incorrect, ' + name + ' sorry.');
 }
 
-let parting = alert('Thank you for learning a bit about me ' + name + '. It is great to have you here!');
+let parting = alert('Thank you for learning a bit about me, ' + name + '. It is great to have you here!');
 // console.log(parting);
