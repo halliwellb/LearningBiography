@@ -43,6 +43,9 @@ if (questionSeven === '') {
   trys += 1;
 }
 
+let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
+console.log(parting);
+
 document.write('Great job! You got ' + r + ' questions correct!');
 
 // 'use strict';
@@ -106,8 +109,3 @@ document.write('Great job! You got ' + r + ' questions correct!');
 //   alert('Incorrect, sorry.');
 // //   console.log('Incorrect, ' + name + ' sorry.');
 // }
-
-
-
-let parting = alert('Thank you for learning a bit about me, ' + name + '. It is great to have you here!');
-console.log(parting);
