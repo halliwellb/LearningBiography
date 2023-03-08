@@ -34,5 +34,6 @@ p {
 
 footer {
     background-color: rgb(81, 122, 250);
+    text-align: center;
     position: fixed;
 }
