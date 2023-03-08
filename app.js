@@ -41,7 +41,7 @@ if (questionThree === '') {
 let questionFour = prompt('The third question is: Do I still work in financial planning?').toLowerCase();
 if (questionFour === '') {
   questionFour = prompt('Please answer yes or no.');
-} else if (questionFour === 'yes') {
+} else if (questionFour === 'no') {
   alert('Correct!');
 //   console.log('Correct, ' + name + '!');
 } else {
