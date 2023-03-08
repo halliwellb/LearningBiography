@@ -21,13 +21,22 @@ h2 {
 
 h3 {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
-
 p {
     color: rgb(248, 248, 248);
     background-color: rgb(19, 67, 139);
     font-size: 24px;
+    margin: 12.5px;
+    padding: 12.5px;
+}
+
+ul {
+    background-color: rgb(19, 67, 139);
+}
+li {
+    font-size: 24px;
+    text-decoration: double;
     margin: 12.5px;
     padding: 12.5px;
 }
@@ -38,6 +47,22 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.work {
+    color: rgb(248, 248, 248);
+    background-color: rgb(19, 67, 139);
+    font-size: 24px;
+    margin: 12.5px;
+    padding: 12.5px;
+}
+
+.education {
+    color: rgb(248, 248, 248);
+    background-color: rgb(19, 67, 139);
+    font-size: 24px;
+    margin: 12.5px;
+    padding: 12.5px;
 }
 
 footer {

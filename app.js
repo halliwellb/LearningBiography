@@ -1,64 +1,113 @@
 'use strict';
 
+let questionOne = 'I would like to ask you a few questions. Would that be alright?';
+let questionTwo = 'The first question is: Do I live in Maine?';
+let questionThree = 'The second question is: Do I have a finance degree?';
+let questionFour = 'The third question is: Do I still work in financial planning?';
+let questionFive = 'The fourth question is: Is my wife a flower farmer?';
+let questionSix = 'The fifth question is: Was I in the military?';
+let questionEight = 'The sixth question is: Am I training in software development?';
+
+let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionEight];
+let answers = ['yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes'];
+let response = null;
+
 let name = prompt('Hello! What is your name?');
-alert('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions.');
-// console.log('Your name is ' + name + '.');
+alert('Hi, ' + name + '! Thanks for coming by!');
 
-let questionOne = prompt('Would that be alright, ' + name + '?').toLowerCase();
+let r =0;
 
-if (questionOne === '') {
-  questionOne = prompt('Please answer yes or no.');
-} else if (questionOne === 'yes') {
-  alert('Awesome! Coming right up.');
-//   console.log('Thanks for playing, ' + name + '!');
-} else {
-  alert('I do not understand..If yes, please type yes.');
-//   console.log('I do not understand..If yes, please type yes.');
+for (let i =0; i < questions.length; i++) {
+  {response = prompt(questions[i]);
+    console.log(questions);
+    if (response === answers[i]) {
+      alert('Great!'); {
+        r++;
+      }
+    } else {
+      alert('Wrong!');
+    }
+  }
 }
 
-let questionTwo = prompt('The first question is: Do I live in Maine?').toLowerCase();
-if (questionTwo === '') {
-  questionTwo = prompt('Please answer yes or no.');
-} else if (questionTwo === 'yes') {
-  alert('Correct!');
-//   console.log('Correct, ' + name + '!');
-} else {
-  alert('Incorrect, sorry.');
-//   console.log('Incorrect, ' + name + ' sorry.');
+let myNumber = 17;
+let trys = 0;
+let questionSeven = prompt('Please choose a number between 1-20');
+if (questionSeven === '') {
+  questionSeven = prompt('Please choose a number! 1-20');
+} while(trys < 5) {
+  if (questionSeven == myNumber) {
+    alert('Wow, that is exactly right!');
+    break;
+  } else (questionSeven = prompt('I am sorry, incorrect. Please choose another number'));
+  trys += 1;
 }
 
-let questionThree = prompt('The second question is: Do I have a finance degree?').toLowerCase();
-if (questionThree === '') {
-  questionThree = prompt('Please answer yes or no.');
-} else if (questionThree === 'yes') {
-  alert('Correct!');
-//   console.log('Correct, ' + name + '!');
-} else {
-  alert('Incorrect, sorry.');
-//   console.log('Incorrect, ' + name + ' sorry.');
-}
+document.write('Great job! You got ' + r + ' questions correct!');
 
-let questionFour = prompt('The third question is: Do I still work in financial planning?').toLowerCase();
-if (questionFour === '') {
-  questionFour = prompt('Please answer yes or no.');
-} else if (questionFour === 'no') {
-  alert('Correct!');
-//   console.log('Correct, ' + name + '!');
-} else {
-  alert('Incorrect, sorry.');
-//   console.log('Incorrect, ' + name + ' sorry.');
-}
+// 'use strict';
 
-let questionFive = prompt('The last question is: Is my wife a flower farmer?').toLowerCase();
-if (questionFive === '') {
-  questionFive = prompt('Please answer yes or no.');
-} else if (questionFive === 'yes') {
-  alert('Correct!');
-//   console.log('Correct, ' + name + '!');
-} else {
-  alert('Incorrect, sorry.');
-//   console.log('Incorrect, ' + name + ' sorry.');
-}
+// let name = prompt('Hello! What is your name?');
+// alert('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions.');
+// // console.log('Your name is ' + name + '.');
+
+// let questionOne = prompt('Would that be alright, ' + name + '?').toLowerCase();
+
+// if (questionOne === '') {
+//   questionOne = prompt('Please answer yes or no.');
+// } else if (questionOne === 'yes') {
+//   alert('Awesome! Coming right up.');
+// //   console.log('Thanks for playing, ' + name + '!');
+// } else {
+//   alert('I do not understand..If yes, please type yes.');
+// //   console.log('I do not understand..If yes, please type yes.');
+// }
+
+// let questionTwo = prompt('The first question is: Do I live in Maine?').toLowerCase();
+// if (questionTwo === '') {
+//   questionTwo = prompt('Please answer yes or no.');
+// } else if (questionTwo === 'yes') {
+//   alert('Correct!');
+// //   console.log('Correct, ' + name + '!');
+// } else {
+//   alert('Incorrect, sorry.');
+// //   console.log('Incorrect, ' + name + ' sorry.');
+// }
+
+// let questionThree = prompt('The second question is: Do I have a finance degree?').toLowerCase();
+// if (questionThree === '') {
+//   questionThree = prompt('Please answer yes or no.');
+// } else if (questionThree === 'yes') {
+//   alert('Correct!');
+// //   console.log('Correct, ' + name + '!');
+// } else {
+//   alert('Incorrect, sorry.');
+// //   console.log('Incorrect, ' + name + ' sorry.');
+// }
+
+// let questionFour = prompt('The third question is: Do I still work in financial planning?').toLowerCase();
+// if (questionFour === '') {
+//   questionFour = prompt('Please answer yes or no.');
+// } else if (questionFour === 'no') {
+//   alert('Correct!');
+// //   console.log('Correct, ' + name + '!');
+// } else {
+//   alert('Incorrect, sorry.');
+// //   console.log('Incorrect, ' + name + ' sorry.');
+// }
+
+// let questionFive = prompt('The last question is: Is my wife a flower farmer?').toLowerCase();
+// if (questionFive === '') {
+//   questionFive = prompt('Please answer yes or no.');
+// } else if (questionFive === 'yes') {
+//   alert('Correct!');
+// //   console.log('Correct, ' + name + '!');
+// } else {
+//   alert('Incorrect, sorry.');
+// //   console.log('Incorrect, ' + name + ' sorry.');
+// }
+
+
 
 let parting = alert('Thank you for learning a bit about me, ' + name + '. It is great to have you here!');
 console.log(parting);
