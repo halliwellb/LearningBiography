@@ -9,7 +9,7 @@ let questionOne = prompt('Would that be alright, ' + name + '?').toLowerCase();
 if (questionOne === '') {
   questionOne = prompt('Please answer yes or no.');
 } else if (questionOne === 'yes') {
-  alert('Awesome, ' + name + '! Coming right up.');
+  alert('Awesome! Coming right up.');
 //   console.log('Thanks for playing, ' + name + '!');
 } else {
   alert('I do not understand..If yes, please type yes.');
