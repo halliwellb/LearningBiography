@@ -52,7 +52,7 @@ if (questionFour === '') {
 let questionFive = prompt('The last question is: Is my wife a flower farmer?').toLowerCase();
 if (questionFive === '') {
   questionFive = prompt('Please answer yes or no.');
-} else if (questionFive === "yes") {
+} else if (questionFive === 'yes') {
   alert('Correct!');
 //   console.log('Correct, ' + name + '!');
 } else {
@@ -61,4 +61,4 @@ if (questionFive === '') {
 }
 
 let parting = alert('Thank you for learning a bit about me, ' + name + '. It is great to have you here!');
-// console.log(parting);
+console.log(parting);
