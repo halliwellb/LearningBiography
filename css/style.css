@@ -6,6 +6,7 @@ body {
 header {
     background-color: rgb(255, 234, 196);
     border: 10px groove white;
+    display: block;
     margin: 12.5px 225px 12.5px 225px;
     padding: 25px 25px 80px 25px;
     height: 85px;
@@ -40,8 +41,20 @@ p {
 
 ul {
     background-color: rgb(19, 67, 139);
+    font-size: 24px;
+    margin: 50px 12.5px 50px 12.5px;
+    padding: 0px 25px 0px 25px;
 }
+
+ol {
+    background-color: rgb(19, 67, 139);
+    font-size: 24px;
+    margin: 50px 12.5px 50px 12.5px;
+    padding: 0px 25px 0px 25px;
+}
+
 li {
+    color: rgb(248, 248, 248);
     font-size: 24px;
     text-decoration: double;
     margin: 12.5px;
