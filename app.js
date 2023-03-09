@@ -17,9 +17,9 @@ let questionThree = 'The second question is: Do I have a finance degree?';
 let questionFour = 'The third question is: Do I still work in financial planning?';
 let questionFive = 'The fourth question is: Is my wife a flower farmer?';
 let questionSix = 'The fifth question is: Was I in the military?';
-let questionEight = 'The sixth question is: Am I training in software development?';
+let questionSeven = 'The sixth question is: Am I training in software development?';
 
-let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionEight];
+let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
 let answers = ['yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes'];
 let response = [''];
 
@@ -49,7 +49,7 @@ if (questionNumberGuess === '') {
   if (questionNumberGuess == myNumber) {
     alert('Wow, that is exactly right!');
     break;
-  } else (questionNumberGuess = prompt('I am sorry, incorrect. Please choose another number'));
+  } else questionNumberGuess (prompt('I am sorry, incorrect. Please choose another number'));
   trys += 1;
 }
 
