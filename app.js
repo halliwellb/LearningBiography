@@ -62,7 +62,7 @@ numberGame();
 let myAge = ('31');
 let userTrys = 0;
 
-function myGame() {
+// function myGame() {
   let game = prompt('Guess how old I am. You will have 4 trys.'); {
     if (game === '') { 
       game = prompt('Please guess!');
@@ -75,8 +75,8 @@ function myGame() {
       userTrys ++;
     }
   }
-}
-myGame();
+// }
+// myGame();
 
 let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
 console.log(parting);
