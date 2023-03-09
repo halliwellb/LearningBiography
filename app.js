@@ -47,4 +47,4 @@ if (questionSeven === '') {
 let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
 console.log(parting);
 
-document.write('Great job! You got ' + r + ' questions correct!');
+document.write('<h4>Great job, ' + name + '! You got ' + r + ' questions correct!</h4>');

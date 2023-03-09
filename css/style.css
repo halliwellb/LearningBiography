@@ -23,6 +23,13 @@ h3 {
     text-align: center;
     font-size: 40px;
 }
+
+h4 {
+    color: rgb(19, 67, 139);
+    text-justify: auto;
+    font-size: 40px;
+}
+
 p {
     color: rgb(248, 248, 248);
     background-color: rgb(19, 67, 139);
