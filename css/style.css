@@ -12,7 +12,7 @@ header {
     margin: 12.5px 225px 12.5px 225px;
     padding: 25px 25px 80px 25px;
     height: 85px;
-    text-align: center;
+    align-self: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
 }
@@ -59,6 +59,7 @@ ol {
     font-size: 24px;
     margin: 50px 12.5px 50px 12.5px;
     padding: 0px 25px 0px 25px;
+    display: inline-block;
 }
 
 li {
