@@ -40,18 +40,23 @@ for (let i = 0; i < questions.length; i++) {
   }
 }
 
-let myNumber = 17;
+let myNumber = ('17');
 let trys = 0;
-let questionNumberGuess = prompt('Please choose a number between 1-20');
-if (questionNumberGuess === '') {
-  questionNumberGuess = prompt('Please choose a number! 1-20');
-} while (trys < 5) {
-  if (questionNumberGuess == myNumber) {
-    alert('Wow, that is exactly right!');
-    break;
-  } else questionNumberGuess (prompt('I am sorry, incorrect. Please choose another number'));
-  trys += 1;
+
+function numberGame() {
+  let guess = prompt('Choose a number between 1 and 20.'); {
+    if (guess === '') {
+      guess = prompt('Please choose a number! 1-20');
+    } while (trys < 5) {
+      if (guess === myNumber) {
+        alert('Wow, that is exactly right!');
+        return true;
+      } else guess = prompt('I am sorry, incorrect. Please choose another number');
+      trys ++;
+    }
+  }
 }
+numberGame();
 
 let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
 console.log(parting);
