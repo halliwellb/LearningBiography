@@ -50,6 +50,7 @@ function numberGame() {
     } while (trys < 5) {
       if (guess === myNumber) {
         alert('Wow, that is exactly right!');
+        r++;
         return true;
       } else guess = prompt('I am sorry, incorrect. Please choose another number');
       trys ++;
@@ -57,6 +58,21 @@ function numberGame() {
   }
 }
 numberGame();
+
+let myAge = ('31');
+
+let game = prompt('Guess how old I am. You will have 4 trys.'); {
+  if (game === '') { 
+    game = prompt('Please guess!');
+  } while (trys <3) {
+    if (game === myAge) {
+      alert('Are you psychic?');
+      r++;
+      return true;
+    } else game = prompt('Sorry, try again!');
+    trys ++;
+  }
+}
 
 let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
 console.log(parting);
