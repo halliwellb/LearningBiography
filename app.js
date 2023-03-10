@@ -1,12 +1,14 @@
 'use strict';
-
 // User greeting:
-let name = prompt('Hello! What is your name?');
-let greeting = prompt('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
-  if (greeting === 'yes') {
-    greeting = alert('Perfect! Get ready!');
-  } else if (alert('No fun.'));
+function userGreeting() {
+  let name = prompt('Hello! What is your name?');
+  let greeting = prompt('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
+    if (greeting === 'yes') {
+      greeting = alert('Perfect! Get ready!');
+    } else (alert('No fun.'));
+  }
 }
+userGreeting();
 
 // Website score tracker = r
 let r = 0;
@@ -20,14 +22,13 @@ let questionSix = 'The sixth question is: Am I training in software development?
 
 let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix];
 let answers = ['yes', 'yes', 'no', 'yes', 'yes', 'yes'];
-let response = [''];
 
 // First game; six questions with each correct answer awarding a point
 function myQuestionGame (){
   for (let i = 0; i < questions.length; i++) {
     let userCorrect = prompt(questions[i]);
     if (userCorrect === answers[i]) {
-      alert('Awesome!');
+      alert('That is correct!');
       r++;
       console.log(userCorrect);
     } else {
