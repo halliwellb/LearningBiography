@@ -21,3 +21,7 @@ Line 46 - [Picture credit: Cameron Shepherd; Lewis Pugh Foundation](https://lewi
 #### Score for Lab 3
 
 ![Lighthouse score Lab3](css/img/LighthouseScoreLab3.png)
+
+#### Lab 4
+
+Kaeden as Driver Ben as Navigator. The code was worked on together.
