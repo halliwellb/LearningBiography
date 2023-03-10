@@ -2,7 +2,7 @@
 // User greeting:
 function userGreeting() {
   let name = prompt('Hello! What is your name?');
-  let greeting = prompt('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
+  let greeting = prompt('Hi, ' + name + ' ! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
     if (greeting === 'yes') {
       greeting = alert('Perfect! Get ready!');
     } else (alert('No fun.'));
@@ -45,7 +45,7 @@ let trys = 0;
 
 // Second game; six attempts to guess correct number with single correct answer awarding a point
 function myNumberGame() {
-  let guess = prompt('Choose a number between 1 and 20.'); {
+  let guess = +prompt('Choose a number between 1 and 20.'); {
     if (guess === '') {
       guess = prompt('Please choose a number! 1-20');
     } while (trys < 5) {
@@ -65,7 +65,7 @@ const myAge = ('31');
 let userTrys = 1;
 // Third game; Four attempts to guess my age with correct answer awarding a point
 function myAgeGame() {
-  let guessAge = prompt('Guess how old I am. You will have 4 trys.');
+  let guessAge = +prompt('Guess how old I am. You will have 4 trys.');
   for (let userTryNum = userTrys; userTrys < 4; userTrys++) {
     if (guessAge > myAge) {
       guessAge = prompt('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTryNum + ' out of 4 total trys!');
