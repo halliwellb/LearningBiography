@@ -1,16 +1,6 @@
 'use strict';
 
-function askQuestion(questions, answers) {
-  let response = prompt(questions);
-  if (response) {
-    if (response === answers) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
-
+let response = [''];
 let questionOne = 'I would like to ask you a few questions. Would that be alright?';
 let questionTwo = 'The first question is: Do I live in Maine?';
 let questionThree = 'The second question is: Do I have a finance degree?';
@@ -19,17 +9,26 @@ let questionFive = 'The fourth question is: Is my wife a flower farmer?';
 let questionSix = 'The fifth question is: Was I in the military?';
 let questionSeven = 'The sixth question is: Am I training in software development?';
 
+
 let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
 let answers = ['yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes'];
-let response = [''];
 
-let name = prompt('Hello! What is your name?');
-alert('Hi, ' + name + '! Thanks for coming by!');
+let userName = prompt('Hello! What is your name?');
+alert('Hi, ' + userName + '! Thanks for coming by!');
 
 let r = 0;
-
+function askQuestion(questions, answers) {
+  response = prompt(questions);
+  if (response) {
+    if (response === answers) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 for (let i = 0; i < questions.length; i++) {
-  let userCorrect = askQuestion(questions[i], answers[i]);
+  let userCorrect = prompt(questions[i], answers[i]);
   if (userCorrect) {
     alert('Awesome!');
     r++;
@@ -39,6 +38,7 @@ for (let i = 0; i < questions.length; i++) {
     console.log(userCorrect);
   }
 }
+askQuestion();
 
 let myNumber = ('17');
 let trys = 0;
@@ -52,8 +52,9 @@ function numberGame() {
         alert('Wow, that is exactly right!');
         r++;
         return true;
-      } else guess = prompt('I am sorry, incorrect. Please choose another number');
-      trys ++;
+      } else { guess = prompt('I am sorry, incorrect. Please choose another number');
+        trys ++;
+      }
     }
   }
 }
@@ -63,22 +64,25 @@ let myAge = ('31');
 let userTrys = 0;
 
 // function myGame() {
+function otherNumGame(){
   let game = prompt('Guess how old I am. You will have 4 trys.'); {
-    if (game === '') { 
+    if (game === '') {
       game = prompt('Please guess!');
-    } while (userTrys <2) {
+    } while (userTrys < 2) {
       if (game === myAge) {
         alert('Are you psychic?');
         r++;
-        return true;
-      } else game = prompt('Sorry, try again!');
-      userTrys ++;
+        break;
+      } else { game = prompt('Sorry, try again!');
+        userTrys ++;
+      }
     }
   }
+}
+otherNumGame();
 // }
 // myGame();
 
-let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
+let parting = alert('Thank you for learning a bit about me, ' + userName + '. You got ' + r + ' questions correct!');
 console.log(parting);
-
-document.write('<h4>Great job, ' + name + '! You got ' + r + ' questions correct!</h4>');
+// document.write('Great job, ' + name + '! You got ' + r + ' questions correct!');
