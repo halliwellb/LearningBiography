@@ -1,49 +1,49 @@
 'use strict';
 
-function askQuestion(questions, answers) {
-  let response = prompt(questions);
-  if (response) {
-    if (response === answers) {
-      return true;
+// User greeting:
+let name = prompt('Hello! What is your name?');
+let greeting = prompt('Hi, ' + name + '! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
+  if (greeting === 'yes') {
+    greeting = alert('Perfect! Get ready!');
+  } else if (alert('No fun.'));
+}
+
+// Website score tracker = r
+let r = 0;
+// Variables for myQuestionGame function to use
+let questionOne = 'The first question is: Do I live in Maine?';
+let questionTwo = 'The second question is: Do I have a finance degree?';
+let questionThree = 'The third question is: Do I still work in financial planning?';
+let questionFour = 'The fourth question is: Is my wife a flower farmer?';
+let questionFive = 'The fifth question is: Was I in the military?';
+let questionSix = 'The sixth question is: Am I training in software development?';
+
+let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix];
+let answers = ['yes', 'yes', 'no', 'yes', 'yes', 'yes'];
+let response = [''];
+
+// First game; six questions with each correct answer awarding a point
+function myQuestionGame (){
+  for (let i = 0; i < questions.length; i++) {
+    let userCorrect = prompt(questions[i]);
+    if (userCorrect === answers[i]) {
+      alert('Awesome!');
+      r++;
+      console.log(userCorrect);
     } else {
-      return false;
+      alert('Wrong!');
+      console.log(userCorrect);
     }
   }
 }
+myQuestionGame();
 
-let questionOne = 'I would like to ask you a few questions. Would that be alright?';
-let questionTwo = 'The first question is: Do I live in Maine?';
-let questionThree = 'The second question is: Do I have a finance degree?';
-let questionFour = 'The third question is: Do I still work in financial planning?';
-let questionFive = 'The fourth question is: Is my wife a flower farmer?';
-let questionSix = 'The fifth question is: Was I in the military?';
-let questionSeven = 'The sixth question is: Am I training in software development?';
-
-let questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven];
-let answers = ['yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes'];
-let response = [''];
-
-let name = prompt('Hello! What is your name?');
-alert('Hi, ' + name + '! Thanks for coming by!');
-
-let r = 0;
-
-for (let i = 0; i < questions.length; i++) {
-  let userCorrect = askQuestion(questions[i], answers[i]);
-  if (userCorrect) {
-    alert('Awesome!');
-    r++;
-    console.log(userCorrect);
-  } else {
-    alert('Wrong!');
-    console.log(userCorrect);
-  }
-}
-
+// variables for myNumberGame to use
 let myNumber = ('17');
 let trys = 0;
 
-function numberGame() {
+// Second game; six attempts to guess correct number with single correct answer awarding a point
+function myNumberGame() {
   let guess = prompt('Choose a number between 1 and 20.'); {
     if (guess === '') {
       guess = prompt('Please choose a number! 1-20');
@@ -57,28 +57,30 @@ function numberGame() {
     }
   }
 }
-numberGame();
+myNumberGame();
 
-let myAge = ('31');
-let userTrys = 0;
-
-// function myGame() {
-  let game = prompt('Guess how old I am. You will have 4 trys.'); {
-    if (game === '') { 
-      game = prompt('Please guess!');
-    } while (userTrys <2) {
-      if (game === myAge) {
-        alert('Are you psychic?');
-        r++;
-        return true;
-      } else game = prompt('Sorry, try again!');
-      userTrys ++;
+// variables for myAgeGame to use
+const myAge = ('31');
+let userTrys = 1;
+// Third game; Four attempts to guess my age with correct answer awarding a point
+function myAgeGame() {
+  let guessAge = prompt('Guess how old I am. You will have 4 trys.');
+  for (let userTryNum = userTrys; userTrys < 4; userTrys++) {
+    if (guessAge > myAge) {
+      guessAge = prompt('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTryNum + ' out of 4 total trys!');
+    } else if (guessAge < myAge) {
+      guessAge = prompt('Your guess was ' + guessAge + '. Too low! Try again. You have used ' + userTryNum + ' out of 4 total trys!');
+    } else if (guessAge === myAge) {
+      guessAge = alert('Are you psychic?');
+      r++;
+      break;
+    } else {
+      alert('Out of trys. Better luck next time!');
     }
   }
-// }
-// myGame();
+}
+myAgeGame();
 
-let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct!');
+// User goodbye; tells the user their total score out of "x" questions
+let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct out of 8 total questions!');
 console.log(parting);
-
-document.write('<h4>Great job, ' + name + '! You got ' + r + ' questions correct!</h4>');
