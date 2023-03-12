@@ -29,10 +29,8 @@ function myQuestionGame (){
     if (userCorrect === answers[i]) {
       alert('That is correct!');
       r++;
-      console.log(userCorrect);
     } else {
       alert('Wrong!');
-      console.log(userCorrect);
     }
   }
 }
@@ -48,15 +46,12 @@ function myNumberGame() {
     for (let trys = t; t < 6; t++) {
       if (guess === myNumber) {
         alert('Wow, great guess! That is exactly right!');
-        console.log('Wow, great guess! That is exactly right!');
         r++;
         break;
       } else if (guess > myNumber) {
         guess = prompt('Your guess was ' + guess + '. Too high! Try again. You have used ' + t + ' out of 6 total trys!');
-        console.log('Your guess was ' + guess + '. Too high! Try again. You have used ' + t + ' out of 6 total trys!');
       } else if (guess < myNumber) {
         guess = prompt('Your guess was ' + guess + '. Too low! Try again. You have used ' + t + ' out of 6 total trys!');
-        console.log('Your guess was ' + guess + '. Too low! Try again. You have used ' + t + ' out of 6 total trys!');
       }
     }
   }
@@ -73,12 +68,10 @@ function myAgeGame() {
     for (let userTryNum = userTrys; userTrys < 5; userTrys++) {
       if (guessAge === myAge) {
         guessAge = alert('Wow, incredible guess! Are you psychic?');
-        console.log('Wow, incredible guess! Are you psychic?');
         r++;
         break;
       } else if (guessAge > myAge) {
         guessAge = prompt('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTrys + ' out of 4 total trys!');
-        console.log('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTrys + ' out of 4 total trys!');
       } else if (guessAge < myAge) {
         guessAge = prompt('Your guess was ' + guessAge + '. Too low! Try again. You have used ' + userTrys + ' out of 4 total trys!');
       }
@@ -88,4 +81,3 @@ function myAgeGame() {
 myAgeGame();
 
 let goodByeUser = alert('Thank you for learning a bit about me! You got ' + r + ' questions correct out of 8 total questions!');
-console.log(goodByeUser);
