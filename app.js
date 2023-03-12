@@ -1,8 +1,7 @@
 'use strict';
-// User greeting:
 function userGreeting() {
-  let name = prompt('Hello! What is your name?');
-  let greeting = prompt('Hi, ' + name + ' ! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
+  let usersName = prompt('Hello! What is your name?');
+  let greeting = prompt('Hi, ' + usersName + '! Thanks for coming by! I would like to ask you a few questions. Would that be alright?'); {
     if (greeting === 'yes') {
       greeting = alert('Perfect! Get ready!');
     } else (alert('No fun.'));
@@ -41,20 +40,24 @@ myQuestionGame();
 
 // variables for myNumberGame to use
 let myNumber = ('17');
-let trys = 0;
+let t = 1;
 
 // Second game; six attempts to guess correct number with single correct answer awarding a point
 function myNumberGame() {
-  let guess = +prompt('Choose a number between 1 and 20.'); {
-    if (guess === '') {
-      guess = prompt('Please choose a number! 1-20');
-    } while (trys < 5) {
+  let guess = prompt('Choose a number between 1 and 20.'); {
+    for (let trys = t; t < 6; t++) {
       if (guess === myNumber) {
-        alert('Wow, that is exactly right!');
+        alert('Wow, great guess! That is exactly right!');
+        console.log('Wow, great guess! That is exactly right!');
         r++;
-        return true;
-      } else guess = prompt('I am sorry, incorrect. Please choose another number');
-      trys ++;
+        break;
+      } else if (guess > myNumber) {
+        guess = prompt('Your guess was ' + guess + '. Too high! Try again. You have used ' + t + ' out of 6 total trys!');
+        console.log('Your guess was ' + guess + '. Too high! Try again. You have used ' + t + ' out of 6 total trys!');
+      } else if (guess < myNumber) {
+        guess = prompt('Your guess was ' + guess + '. Too low! Try again. You have used ' + t + ' out of 6 total trys!');
+        console.log('Your guess was ' + guess + '. Too low! Try again. You have used ' + t + ' out of 6 total trys!');
+      }
     }
   }
 }
@@ -63,25 +66,26 @@ myNumberGame();
 // variables for myAgeGame to use
 const myAge = ('31');
 let userTrys = 1;
+
 // Third game; Four attempts to guess my age with correct answer awarding a point
 function myAgeGame() {
-  let guessAge = +prompt('Guess how old I am. You will have 4 trys.');
-  for (let userTryNum = userTrys; userTrys < 4; userTrys++) {
-    if (guessAge > myAge) {
-      guessAge = prompt('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTryNum + ' out of 4 total trys!');
-    } else if (guessAge < myAge) {
-      guessAge = prompt('Your guess was ' + guessAge + '. Too low! Try again. You have used ' + userTryNum + ' out of 4 total trys!');
-    } else if (guessAge === myAge) {
-      guessAge = alert('Are you psychic?');
-      r++;
-      break;
-    } else {
-      alert('Out of trys. Better luck next time!');
+  let guessAge = prompt('Guess how old I am. You will have 4 trys.'); {
+    for (let userTryNum = userTrys; userTrys < 5; userTrys++) {
+      if (guessAge === myAge) {
+        guessAge = alert('Wow, incredible guess! Are you psychic?');
+        console.log('Wow, incredible guess! Are you psychic?');
+        r++;
+        break;
+      } else if (guessAge > myAge) {
+        guessAge = prompt('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTrys + ' out of 4 total trys!');
+        console.log('Your guess was ' + guessAge + '. Too high! Try again. You have used ' + userTrys + ' out of 4 total trys!');
+      } else if (guessAge < myAge) {
+        guessAge = prompt('Your guess was ' + guessAge + '. Too low! Try again. You have used ' + userTrys + ' out of 4 total trys!');
+      }
     }
   }
 }
 myAgeGame();
 
-// User goodbye; tells the user their total score out of "x" questions
-let parting = alert('Thank you for learning a bit about me, ' + name + '. You got ' + r + ' questions correct out of 8 total questions!');
-console.log(parting);
+let goodByeUser = alert('Thank you for learning a bit about me! You got ' + r + ' questions correct out of 8 total questions!');
+console.log(goodByeUser);
